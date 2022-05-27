@@ -1,8 +1,8 @@
 import React from 'react';
+import HomePage from '../../pages/homepage';
 
-const App = () => (
-    <div className="App">
-    </div>
+const App:React.FC = () => (
+    <HomePage/>
   )
 
 
