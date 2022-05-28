@@ -1,1 +1,1 @@
-export const endpoints ={}
+export const endpoints = {}

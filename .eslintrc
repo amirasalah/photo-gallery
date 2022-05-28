@@ -1,0 +1,39 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+    "plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:unicorn/recommended", 
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console": 2,
+        "prettier/prettier": 2,
+        "@typescript-eslint/no-empty-function": 0,
+        "no-unexpected-multiline": 1,
+        "simple-import-sort/imports": "error",
+        "unused-imports/no-unused-imports": "error",
+        "unicorn/no-null": 0,
+        "unicorn/filename-case": [
+            "error",
+            {
+                "case": "camelCase"
+            }
+        ]
+    }
+}

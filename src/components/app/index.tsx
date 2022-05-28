@@ -1,9 +1,7 @@
-import React from 'react';
-import HomePage from '../../pages/homepage';
+import React from 'react'
 
-const App:React.FC = () => (
-    <HomePage/>
-  )
+import HomePage from '../../pages/homepage'
 
+const App: React.FC = () => <HomePage />
 
-export default App;
+export default App
