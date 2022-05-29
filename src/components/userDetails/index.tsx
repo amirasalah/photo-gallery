@@ -1,11 +1,11 @@
 import React from 'react'
 
 const userDetails: React.FC<IUserDetailsProperties> = ({ firstName, lastName, imageURL }) => (
-    <section>
-        <p>
-            {firstName} {lastName}
+    <section className='flex justify-end items-center bg-stone-500'>
+        <p className='mr-3 text-white bold text-lg'>
+            {firstName && <span>{firstName}</span>} {lastName && <span>{lastName}</span>}
         </p>
-        <img src={imageURL} alt={`${firstName} ${lastName}`} />
+        {imageURL && <img src={imageURL} alt={`${firstName} ${lastName}`} />}
     </section>
 )
 

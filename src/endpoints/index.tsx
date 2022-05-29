@@ -15,3 +15,9 @@ export const getImageData = async (mediaID: string) => {
         throw new Error(error)
     })
 }
+
+export const getUserData = async (userName: string) => {
+    return await axios.get(`${BASE_URL}/users/${userName}?&api_key=${process.env.REACT_APP_API_KEY}`).catch(error => {
+        throw new Error(error)
+    })
+}
