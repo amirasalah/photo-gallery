@@ -22,7 +22,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-console": 2,
+        "no-console": 1,
         "prettier/prettier": 2,
         "@typescript-eslint/no-empty-function": 0,
         "no-unexpected-multiline": 1,
