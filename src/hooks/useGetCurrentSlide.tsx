@@ -9,17 +9,22 @@ const useGetCurrentSlide = () => {
 
     React.useEffect(() => {
         //Resetting the slide index when the data is loaded
-        const numberOfPosts = data?.data.response.posts.length
-        if (currentSlideIndex === numberOfPosts - 1) {
-            setCurrentSlideIndex(0)
+        const posts = data?.data?.response?.posts
+
+        if (posts) {
+            const numberOfPosts = posts.length
+
+            if (currentSlideIndex === numberOfPosts - 1) {
+                setCurrentSlideIndex(0)
+            }
+
+            const intervalId = setInterval(() => {
+                setCurrentSlideIndex(currentSlideIndex + 1)
+            }, SLIDER_INTERVAL)
+
+            return () => clearInterval(intervalId)
         }
-
-        const intervalId = setInterval(() => {
-            setCurrentSlideIndex(currentSlideIndex + 1)
-        }, SLIDER_INTERVAL)
-
-        return () => clearInterval(intervalId)
-    }, [currentSlideIndex, data?.data.response])
+    }, [currentSlideIndex, data?.data?.response?.posts])
 
     if (isLoading || isError || !data?.data) return null
 

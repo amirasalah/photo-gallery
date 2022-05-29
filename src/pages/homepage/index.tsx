@@ -25,7 +25,7 @@ const HomePage = () => {
                 title={title}
                 description={description}
                 likes={likes}
-                createdAt={created}
+                created={created}
                 username={username}
             />
         </section>

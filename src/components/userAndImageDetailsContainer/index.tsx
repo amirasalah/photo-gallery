@@ -9,7 +9,7 @@ const UserAndImageDetailsContainer: React.FC<IUserAndImageDetailsContainerProppe
     username,
     title,
     likes,
-    createdAt,
+    created,
     description,
 }) => {
     const { data, isError, isLoading } = useFetchUserData(username)
@@ -29,7 +29,7 @@ const UserAndImageDetailsContainer: React.FC<IUserAndImageDetailsContainerProppe
             <div className='flex flex-col justify-between h-full'>
                 <UserDetails firstName={first_name} lastName={last_name} imageURL={profileImage} />
                 <ImageDetails title={title} description={description} />
-                <ImageMetaData likesCount={likes} datePosted={createdAt} />
+                <ImageMetaData likesCount={likes} datePosted={created} />
             </div>
         </div>
     )
