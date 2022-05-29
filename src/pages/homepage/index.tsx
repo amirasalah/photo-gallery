@@ -15,7 +15,7 @@ const HomePage = () => {
 
     return (
         <section className='columns-2 gap-0 h-screen'>
-            <div className='bg-fixed w-full flex justify-center bg-local'>
+            <div className='bg-fixed w-full h-screen flex justify-center bg-local'>
                 <div className='h-screen bg-gradient-to-b from-stone-100 to-neutral-400'>
                     <Image url={data?.data?.response.media.urls.full} description='' />
                 </div>
